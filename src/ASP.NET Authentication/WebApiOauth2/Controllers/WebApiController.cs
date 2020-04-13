@@ -12,13 +12,13 @@ namespace WebApiOauth2.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "Hello REST API", "I am Authorized!" };
         }
 
         // GET api/values/5
         public string Get(int id)
         {
-            return "value";
+            return $"Hello authorized API with Id = {id}";
         }
 
         // POST api/values
