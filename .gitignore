@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/src/ASP.NET Authentication/.vs/ASP.NET Authentication
+/src/ASP.NET Authentication/packages
+/src/ASP.NET Authentication/WebApiOauth2/bin
+/src/ASP.NET Authentication/WebApiOauth2/obj/Debug
