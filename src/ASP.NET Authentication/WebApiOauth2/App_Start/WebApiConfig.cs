@@ -19,6 +19,14 @@ namespace WebApiOauth2
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // WebAPI when dealing with JSON and Javascript
+            // Setup JSON serialization 
+            var formatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            formatter.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+
+            config.Formatters.Clear();
+            config.Formatters.Add(formatter);
         }
     }
 }
