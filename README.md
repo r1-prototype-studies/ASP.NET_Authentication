@@ -22,6 +22,6 @@
 
 ### Postman testing
 
-![Access Token Generation](../doc/accessToken.png)
+![Access Token Generation](/doc/accessToken.png)
 
 ![WebApi Authentication](../doc/WebApi.png)
