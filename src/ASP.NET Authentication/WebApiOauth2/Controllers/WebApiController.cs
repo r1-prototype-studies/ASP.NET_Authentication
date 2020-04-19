@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace WebApiOauth2.Controllers
 {
+    [Authorize]
     public class WebApiController : ApiController
     {
         // GET api/values
