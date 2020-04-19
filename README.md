@@ -3,6 +3,7 @@
 ## OAuth Implementation
 
 - Execution test Url --> https://localhost:44340/api/webapi
+- Token generation url --> https://localhost:44340/token
 
 ### Nugets Installation
 
