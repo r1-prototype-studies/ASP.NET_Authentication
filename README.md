@@ -8,6 +8,7 @@
 # OAuth Authentication
 
 - Execution test Url --> https://localhost:44340/api/webapi
+- Token generation url --> https://localhost:44340/token
 
 ## Nugets Installation
 
@@ -27,6 +28,8 @@
 
 ## Postman testing
 
-![Access Token Generation](../doc/accessToken.png)
+Access Token Generation
+![Access Token Generation](/doc/accessToken.png)
 
-![WebApi Authentication](../doc/WebApi.png)
+WebApi Authentication
+![WebApi Authentication](/doc/WebApi.png)
