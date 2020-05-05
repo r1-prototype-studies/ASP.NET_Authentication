@@ -5,6 +5,10 @@
   - [Nugets Installation](#nugets-installation)
   - [Postman testing](#postman-testing)
   - [References](#references)
+- [Access OAuth REST Web API](#access-oauth-rest-web-api)
+  - [Notes](#notes-1)
+  - [Nugets](#nugets)
+  - [References](#references-1)
 
 ## OAuth Authentication
 
@@ -57,4 +61,15 @@ WebApi Authentication
 2. https://docs.microsoft.com/en-us/previous-versions/aspnet/dn308223(v=vs.113)?redirectedfrom=MSDN
 
 
- 
+## Access OAuth REST Web API
+
+### Notes
+- Get Authorization code using the client credentials
+- Parse the result and get access token
+- Send the access token as an authourization header
+
+### Nugets
+- Newtonsoft.Json
+
+### References
+1. https://www.c-sharpcorner.com/article/c-sharp-net-access-oauth-rest-web-api-method/

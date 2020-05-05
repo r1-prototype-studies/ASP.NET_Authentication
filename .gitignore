@@ -7,3 +7,5 @@
 /src/ASP.NET Authentication/packages
 /src/ASP.NET Authentication/WebApiOauth2/bin
 /src/ASP.NET Authentication/WebApiOauth2/obj/Debug
+/src/ASP.NET Authentication/AccessOAuthRESTApi/bin/Debug
+/src/ASP.NET Authentication/AccessOAuthRESTApi/obj/Debug
