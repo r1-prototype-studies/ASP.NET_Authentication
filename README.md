@@ -1,16 +1,38 @@
-<span>ASP.NET</span> Authentication
+#<span>ASP.NET</span> Authentication
 
 - [OAuth Authentication](#oauth-authentication)
+  - [Notes](#notes)
   - [Nugets Installation](#nugets-installation)
-  - [References](#references)
   - [Postman testing](#postman-testing)
+  - [References](#references)
 
-# OAuth Authentication
+## OAuth Authentication
 
 - Execution test Url --> https://localhost:44340/api/webapi
 - Token generation url --> https://localhost:44340/token
 
-## Nugets Installation
+### Notes
+- Install necessary Nugets
+- Create the necessary tables and stored procedures
+- [Authorize] attribute should be added to controller
+- Add authentication configuration in the startup.cs
+```csharp
+  // Web API configuration and services  
+  // Configure Web API to use only bearer token authentication.  
+  config.SuppressDefaultHostAuthentication();  
+  config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));  
+```
+- Json format for the response
+```csharp
+  // WebAPI when dealing with JSON & JavaScript!  
+  // Setup json serialization to serialize classes to camel (std. Json format)  
+  var formatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;  
+  formatter.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver(); 
+```
+- Implementation authentication in start.auth.cs
+- Implementation authentication provider in AppOAuthProvider    
+            
+### Nugets Installation
 
 - Microsoft.Owin.Security.OAuth
 - Microsoft.Owin.Cors
@@ -21,15 +43,18 @@
 - Microsoft.AspNet.Identity.Owin
 - Microsoft.Owin.Host.SystemWeb
 
-## References
-
-1. https://www.c-sharpcorner.com/article/asp-net-mvc-oauth-2-0-rest-web-api-authorization-using-database-first-approach/
-2. https://docs.microsoft.com/en-us/previous-versions/aspnet/dn308223(v=vs.113)?redirectedfrom=MSDN
-
-## Postman testing
+### Postman testing
 
 Access Token Generation
 ![Access Token Generation](/doc/accessToken.png)
 
 WebApi Authentication
 ![WebApi Authentication](/doc/WebApi.png)
+
+### References
+
+1. https://www.c-sharpcorner.com/article/asp-net-mvc-oauth-2-0-rest-web-api-authorization-using-database-first-approach/
+2. https://docs.microsoft.com/en-us/previous-versions/aspnet/dn308223(v=vs.113)?redirectedfrom=MSDN
+
+
+ 
